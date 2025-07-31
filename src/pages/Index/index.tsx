@@ -13,7 +13,7 @@ import { useApp } from '../../providers/AppProvider'
 export default function Index() {
   const { dispatch, handleGroupWords } = useApp()
   const [isUpdateWordsLoading, setisUpdateWordsLoading] = useState(false)
-  const { words, configTrain, orderTypeEstablished, canSyncWords } = useAppSelector(selectConfigApp)
+  const { words, configTrain, orderTypeEstablished, canSyncWords, studiedHashWords } = useAppSelector(selectConfigApp)
 
   const handleUpdateWords = async () => {
     try {
@@ -82,6 +82,7 @@ export default function Index() {
                     <option value={5}>5+</option>
                     <option value={6}>6+</option>
                     <option value={7}>7+</option>
+                    <option value={30}>30+</option>
                   </Input>
                 </div>
               </Fade>
@@ -90,7 +91,10 @@ export default function Index() {
             <Link className="w-250px mt-5 mb-4 btn btn-primary btn-lg" to="training" color="primary">
               {trans('label.startTraining')}
             </Link>
-            {isUpdateWordsLoading ? <Loading size="22" /> : `${trans('label.totalWords')} ${words.length}`}
+            <div className="mt-3">
+              {isUpdateWordsLoading ? <Loading size="22" /> : `${trans('label.totalWords')} ${words.length}`} <br />
+              {isUpdateWordsLoading ? <Loading size="22" /> : `${trans('label.nStudiesToday')} ${studiedHashWords.length}`}
+            </div>
           </div>
         </div>
       </div>
