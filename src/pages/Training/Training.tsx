@@ -52,6 +52,19 @@ export default function Training() {
     getWordsNotStudied()
   }, [])
 
+  useEffect(() => {
+    console.log('groupHashWords', groupHashWords)
+    console.log('studiedHashWords', studiedHashWords)
+    console.log('getWordsNotStudied', getWordsNotStudied().length === 0)
+    if (getWordsNotStudied().length === 0) {
+      handleAutomaticStudy()
+      showMsgSuccess('info.allWordsStudiedGroup').then(() => {
+        dispatch(setStudiedhashWords([]))
+        navigate('/training', { replace: true })
+      })
+    }
+  }, [studiedHashWords])
+
   if (!word) {
     showMsgError('error.wordNotExist').then(() => navigate('/training', { replace: true }))
     return null

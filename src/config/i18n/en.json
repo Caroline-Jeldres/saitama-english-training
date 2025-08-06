@@ -62,6 +62,7 @@
     "wordNotExist": "Word not exist"
   },
   "info": {
-    "allWordsStudied": "Congratulations! you finished studying all the words."
+    "allWordsStudied": "Congratulations! you finished studying all the words.",
+    "allWordsStudiedGroup": "Congratulations! you finished studying all the words in the group."
   }
 }
