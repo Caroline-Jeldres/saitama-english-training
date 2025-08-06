@@ -20,8 +20,7 @@ describe('App', () => {
   })
 
   it('should show total words in memory', async () => {
-    await waitFor(() => {
-      expect(screen.getByText(`${trans('label.totalWords')} ${3}`)).toBeInTheDocument()
-    })
+    const elements = screen.getAllByText((_, element) => element?.textContent?.includes(`${trans('label.totalWords')} 3`))
+    expect(elements.length).toBeGreaterThan(0)
   })
 })

@@ -52,6 +52,15 @@ export default function Training() {
     getWordsNotStudied()
   }, [])
 
+  useEffect(() => {
+    if (groupHashWords.length > 1 && getWordsNotStudied().length === 0) {
+      handleAutomaticStudy()
+      showMsgSuccess('info.allWordsStudiedGroup').then(() => {
+        navigate('/training', { replace: true })
+      })
+    }
+  }, [studiedHashWords])
+
   if (!word) {
     showMsgError('error.wordNotExist').then(() => navigate('/training', { replace: true }))
     return null

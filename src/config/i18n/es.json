@@ -11,6 +11,7 @@
     "removeDailyProgress": "Eliminar progreso",
     "admin": "Administrador",
     "totalWords": "Total de oraciones:",
+    "totalStudiesToday": "Total de estudiadas",
     "learnEnglishToSpanish": "Aprender de inglés a español",
     "textLogoLarge": "SAITAMA ENGLISH TRAINING",
     "textLogoLargeSlogan": "Mejora tu inglés repitiendo más de 1000 oraciones todos los dias",
@@ -21,7 +22,7 @@
     "loginAdmin": "Login Administrador",
     "email": "Email",
     "password": "Contraseña",
-    "nStudiesToday": "N. estudiadas:",
+    "nStudiesToday": "N. de estudiadas:",
     "addWord": "Añadir frase",
     "editWord": "Editar frase",
     "englishWord": "Oración en inglés",
@@ -62,6 +63,7 @@
     "wordNotExist": "La palabra no existe"
   },
   "info": {
-    "allWordsStudied": "Felicidades! terminaste de estudiar todas las palabras."
+    "allWordsStudied": "Felicidades! terminaste de estudiar todas las palabras.",
+    "allWordsStudiedGroup": "Felicidades! terminaste de estudiar todas las palabras del grupo."
   }
 }

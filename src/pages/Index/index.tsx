@@ -91,7 +91,7 @@ export default function Index() {
             <Link className="w-250px mt-5 mb-4 btn btn-primary btn-lg" to="training" color="primary">
               {trans('label.startTraining')}
             </Link>
-            <div className="mt-3">
+            <div className="mt-3" >
               {isUpdateWordsLoading ? <Loading size="22" /> : `${trans('label.totalWords')} ${words.length}`} <br />
               {isUpdateWordsLoading ? <Loading size="22" /> : `${trans('label.nStudiesToday')} ${studiedHashWords.length}`}
             </div>
